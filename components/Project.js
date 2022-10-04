@@ -3,9 +3,9 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import { TextBlock, TextBlockHeading } from "./Common";
-import projectsData from "./projectsData";
+import projectsData from "./data";
 
-export const Project = ({ children }) => {
+const Project = ({ children }) => {
   return (
     <Wrapper>
       <div>
@@ -36,7 +36,9 @@ export const Project = ({ children }) => {
   );
 };
 
-export const ProjectComponent = ({
+export default Project
+
+const ProjectComponent = ({
   img,
   heading,
   shortDescription,

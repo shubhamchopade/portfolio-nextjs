@@ -2,9 +2,9 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Popup } from "./Common";
 import { Footer } from "./Footer";
-import { Projects } from "./Projects";
+import Projects from "./Project";
 import { ScrollText } from "./ScrollText";
-import { Slider } from "./Slider";
+import { Slider } from "./TextCarousel";
 
 export const Landing = () => {
   const [hovered, setHovered] = useState(false);

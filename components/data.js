@@ -3,7 +3,7 @@ import techSapienImg from "././assets/projects/tech-sapien/cover.png";
 import tailwindGradientsImg from "././assets/projects/tailwind-gradient/cover.png";
 import portfolioImg from "././assets/projects/portfolio/cover.png";
 
-export default [
+const projectData = [
   {
     id: 0,
     img: bookPunditsImg,
@@ -41,3 +41,5 @@ export default [
     liveLink: "https://shubhamchopade.com",
   },
 ];
+
+export default projectData

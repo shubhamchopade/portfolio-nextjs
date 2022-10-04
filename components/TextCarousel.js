@@ -6,7 +6,7 @@ import xmas from "./assets/xmasCap.png";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-export const Slider = () => {
+const TextCarousel = () => {
   const data = ["UI/UX DESIGN", "INSTAGRAM", "DEVELOPMENT"];
   const [counter, setCounter] = useState(2);
   const [service, setService] = useState("UI/UX DESIGN");
@@ -40,6 +40,8 @@ export const Slider = () => {
     },
   };
 
+
+
   // Third Attempts
   useEffect(() => {
     const timer =
@@ -47,7 +49,7 @@ export const Slider = () => {
     counter === 0 && setTimeout(() => setCounter(2), 2000);
     setService(data[counter]);
     return () => clearInterval(timer);
-  }, [counter]);
+  }, [data, counter]);
 
   return (
     <SliderWrapper>
@@ -106,7 +108,7 @@ export const Slider = () => {
                 animate="animate"
                 exit="exit"
                 className="thugLife">
-                <Image src={thugLife} />
+                <Image alt="spectacles" src={thugLife} />
               </motion.div>
             </>
           )}
@@ -118,7 +120,7 @@ export const Slider = () => {
               animate="animate"
               exit="exit"
               className="xmas">
-              <Image src={xmas} />
+              <Image alt="xmas-hat" src={xmas} />
             </motion.div>
           )}
         </AnimatePresence>
@@ -126,6 +128,8 @@ export const Slider = () => {
     </SliderWrapper>
   );
 };
+
+export default TextCarousel
 
 const SliderWrapper = styled.section`
   display: flex;

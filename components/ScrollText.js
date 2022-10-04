@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useScroll, useTransform, useViewportScroll } from "framer-motion";
+import { useScroll } from "framer-motion";
 import styled from "styled-components";
 import { Button } from "./Button";
 
@@ -25,7 +25,6 @@ export const ScrollText = () => {
       let scrolled = (winScroll / height) * 100;
 
       setIsScrolled(scrolled);
-      // console.log(scrolled, isComplete);
     });
   }, [scrollY]);
 
