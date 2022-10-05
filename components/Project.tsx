@@ -5,6 +5,9 @@ import styled from "styled-components";
 import { TextBlock, TextBlockHeading } from "./Common";
 import projectsData from "./data";
 
+/**
+ * Returns all the projects list from data.ts.
+ */
 export const Project = () => {
   return (
     <Wrapper>
@@ -58,7 +61,9 @@ const ProjectComponent = ({
 
         <LinksContainer>
           <Link href={aboutLink} className="btn-link effect">
-            About
+            <a className="btn-link effect" rel="noreferrer">
+              About
+            </a>
           </Link>
           <a
             href={liveLink}

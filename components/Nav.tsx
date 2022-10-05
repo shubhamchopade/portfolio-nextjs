@@ -2,6 +2,10 @@ import Link from "next/link";
 import ReactGA from "react-ga4";
 import styled from "styled-components";
 
+/**
+ *
+ * @returns Navigation wrapper containing resume and linkedin links.
+ */
 export const Nav = () => {
   return (
     <NavWrapper>
