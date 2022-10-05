@@ -79,7 +79,7 @@ export const ScrollText = () => {
             GET YOUR WORK DONE
           </Text> */}
         </SVG>
-        {/* <Image
+        <Image
           loading="lazy"
           width={200}
           height={300}
@@ -87,7 +87,7 @@ export const ScrollText = () => {
             "https://pico.techsapien.dev/!2DqWZSayDM/velWPhVMQeQKcxggNEU8YmIo52R.jpg"
           }
           alt="random"
-        /> */}
+        />
         <Example />
       </Container>
       <div style={{ height: "30vh" }}>
