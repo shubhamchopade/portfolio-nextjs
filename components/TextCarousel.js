@@ -6,7 +6,7 @@ import xmas from "./assets/xmasCap.png";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-const TextCarousel = () => {
+export const TextCarousel = () => {
   const data = ["UI/UX DESIGN", "INSTAGRAM", "DEVELOPMENT"];
   const [counter, setCounter] = useState(2);
   const [service, setService] = useState("UI/UX DESIGN");
@@ -129,7 +129,6 @@ const TextCarousel = () => {
   );
 };
 
-export default TextCarousel
 
 const SliderWrapper = styled.section`
   display: flex;

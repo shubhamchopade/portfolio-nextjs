@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { TextBlock, TextBlockHeading } from "./Common";
 import projectsData from "./data";
 
-const Project = ({ children }) => {
+export const Project = ({ children }) => {
   return (
     <Wrapper>
       <div>
@@ -36,7 +36,6 @@ const Project = ({ children }) => {
   );
 };
 
-export default Project
 
 const ProjectComponent = ({
   img,
