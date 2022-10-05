@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import { TextBlock, TextBlockHeading } from "./Common";
 import projectsData from "./data";
 
-export const Project = ({ children }) => {
+export const Project = () => {
   return (
     <Wrapper>
       <div>
@@ -16,26 +16,21 @@ export const Project = ({ children }) => {
       </div>
       <hr />
       {projectsData.map((project, key) => {
-        const { id, img, heading, shortDescription, aboutLink, liveLink } =
-          project;
+        const { img, heading, shortDescription, aboutLink, liveLink } = project;
         return (
           <ProjectComponent
             key={key}
-            id={id}
             img={img}
             heading={heading}
             shortDescription={shortDescription}
             aboutLink={aboutLink}
             liveLink={liveLink}
-          >
-            {children}
-          </ProjectComponent>
+          />
         );
       })}
     </Wrapper>
   );
 };
-
 
 const ProjectComponent = ({
   img,
@@ -43,6 +38,12 @@ const ProjectComponent = ({
   shortDescription,
   aboutLink,
   liveLink,
+}: {
+  img: StaticImageData;
+  heading: string;
+  shortDescription: string;
+  aboutLink: string;
+  liveLink: string;
 }) => {
   return (
     <>
@@ -65,23 +66,7 @@ const ProjectComponent = ({
             className="btn-link effect"
             rel="noreferrer"
           >
-            Check Live
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M13 3L16.293 6.293L9.293 13.293L10.707 14.707L17.707 7.707L21 11V3H13Z"
-                fill="#C2AB8E"
-              />
-              <path
-                d="M19 19H5V5H12L10 3H5C3.897 3 3 3.897 3 5V19C3 20.103 3.897 21 5 21H19C20.103 21 21 20.103 21 19V14L19 12V19Z"
-                fill="#C2AB8E"
-              />
-            </svg>
+            Check Live <ExternalLinkIcon />
           </a>
         </LinksContainer>
       </LocalContainer>
@@ -198,3 +183,22 @@ const LinksContainer = styled.div`
     }
   }
 `;
+
+const ExternalLinkIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M13 3L16.293 6.293L9.293 13.293L10.707 14.707L17.707 7.707L21 11V3H13Z"
+      fill="#C2AB8E"
+    />
+    <path
+      d="M19 19H5V5H12L10 3H5C3.897 3 3 3.897 3 5V19C3 20.103 3.897 21 5 21H19C20.103 21 21 20.103 21 19V14L19 12V19Z"
+      fill="#C2AB8E"
+    />
+  </svg>
+);

@@ -30,28 +30,28 @@ export const Footer = () => {
           rel="noreferrer"
         >
           {" "}
-          <Image src={linkedin} />
+          <Image src={linkedin} alt="linkedin-icon" />
         </a>
         <a
           href="https://www.instagram.com/tech.sapien/"
           target="_blank"
           rel="noreferrer"
         >
-          <Image src={instagram} />
+          <Image src={instagram} alt="instagram-icon" />
         </a>
         <a
           href="https://github.com/shubhamchopade"
           target="_blank"
           rel="noreferrer"
         >
-          <Image src={github} />
+          <Image src={github} alt="github-icon" />
         </a>
         <a
           href="https://codepen.io/shubhamchopade"
           target="_blank"
           rel="noreferrer"
         >
-          <Image src={codepen} />
+          <Image src={codepen} alt="codepen-icon" />
         </a>
       </div>
     </Container>

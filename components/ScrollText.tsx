@@ -4,14 +4,8 @@ import styled from "styled-components";
 import { Button } from "./HireButton";
 
 export const ScrollText = () => {
-  const [isComplete, setIsComplete] = useState(false);
   const [isScrolled, setIsScrolled] = useState(0);
   const { scrollY } = useScroll();
-
-  const svgVariants = {
-    hidden: {},
-    visible: {},
-  };
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
@@ -37,25 +31,12 @@ export const ScrollText = () => {
           viewBox="0 0 1020 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          variants={svgVariants}
-          initial="hidden"
-          animate="visible"
         >
-          <Text
-            x="10%"
-            y="50%"
-            text-anchor="middle"
-            str={isScrolled}
-            fil={isComplete}
-          >
-            GET YOUR WORK DONE
-          </Text>
+          {/* TODO : Insert Lottiefiles */}
         </SVG>
       </Container>
       <div style={{ height: "30vh" }}>
-        <Button
-          translateX={isScrolled}
-        />
+        <Button translateX={isScrolled} />
       </div>
     </Wrapper>
   );
@@ -67,7 +48,7 @@ const Wrapper = styled.main`
 const Container = styled.section`
   height: 200vh;
 `;
-const SVG = styled.svg.attrs((props) => ({}))`
+const SVG = styled.svg`
   position: sticky;
   top: 30%;
   left: 50%;
@@ -78,7 +59,12 @@ const SVG = styled.svg.attrs((props) => ({}))`
     top: 20%;
   }
 `;
-const Text = styled.text.attrs((props) => ({
+
+interface TextProps {
+  str: number;
+}
+
+const Text = styled.text.attrs((props: TextProps) => ({
   strokeOpacity: props.str + "%",
   fillOpacity: props.str > 90 ? props.str + "%" : 0,
 }))`
