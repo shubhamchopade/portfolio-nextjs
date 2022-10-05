@@ -10,7 +10,8 @@ import theme, { StylesTypes } from "../components/theme";
 
 const GlobalStyles = createGlobalStyle`
     body {
-      background-color:#282729
+      background-color:#282729;
+      position: relative;
     } 
 `;
 
