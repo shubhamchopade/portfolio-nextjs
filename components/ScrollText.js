@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useScroll } from "framer-motion";
 import styled from "styled-components";
-import { Button } from "./Button";
+import { Button } from "./HireButton";
 
 export const ScrollText = () => {
   const [isComplete, setIsComplete] = useState(false);
@@ -54,11 +54,7 @@ export const ScrollText = () => {
       </Container>
       <div style={{ height: "30vh" }}>
         <Button
-          str={isScrolled}
-          fil={isComplete}
-          margin="auto"
-          href="https://www.linkedin.com/in/shubham-chopade/"
-          text="Hire Me"
+          translateX={isScrolled}
         />
       </div>
     </Wrapper>

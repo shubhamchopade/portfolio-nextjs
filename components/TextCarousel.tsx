@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 export const TextCarousel = () => {
-  const data = ["UI/UX DESIGN", "INSTAGRAM", "DEVELOPMENT"];
   const [counter, setCounter] = useState(2);
   const [service, setService] = useState("UI/UX DESIGN");
 
@@ -40,16 +39,17 @@ export const TextCarousel = () => {
     },
   };
 
-
-
   // Third Attempts
   useEffect(() => {
-    const timer =
-      counter > 0 && setInterval(() => setCounter(counter - 1), 2000);
+    const data = ["UI/UX DESIGN", "INSTAGRAM", "DEVELOPMENT"];
+    let timer: NodeJS.Timer;
+    if (counter > 0) {
+      timer = setInterval(() => setCounter(counter - 1), 2000);
+    }
     counter === 0 && setTimeout(() => setCounter(2), 2000);
     setService(data[counter]);
     return () => clearInterval(timer);
-  }, [data, counter]);
+  }, [counter]);
 
   return (
     <SliderWrapper>
@@ -102,12 +102,14 @@ export const TextCarousel = () => {
         <AnimatePresence mode="wait">
           {service === "UI/UX DESIGN" && (
             <>
-              <motion.div key="UI/UX DESIGN"
+              <motion.div
+                key="UI/UX DESIGN"
                 variants={imgVariants}
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="thugLife">
+                className="thugLife"
+              >
                 <Image alt="spectacles" src={thugLife} />
               </motion.div>
             </>
@@ -119,7 +121,8 @@ export const TextCarousel = () => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="xmas">
+              className="xmas"
+            >
               <Image alt="xmas-hat" src={xmas} />
             </motion.div>
           )}
@@ -128,7 +131,6 @@ export const TextCarousel = () => {
     </SliderWrapper>
   );
 };
-
 
 const SliderWrapper = styled.section`
   display: flex;
