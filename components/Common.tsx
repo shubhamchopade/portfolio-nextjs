@@ -44,72 +44,57 @@ export const Popup = styled.p`
 export const Logo = styled.img`
   width: 8rem;
   height: 8rem;
-`
+`;
 export const Cover = styled.img`
   width: 30rem;
   border-radius: 0.5rem;
 
-    @media ${props => props.theme.breakpoints.tablet}{
+  @media ${(props) => props.theme.breakpoints.tablet} {
     width: 100%;
   }
-`
+`;
 export const Image = styled.img`
   width: 100%;
   border-radius: 0.5rem;
   margin: 4rem auto;
-
- &::before{
-   content: ${props => props.caption};
-   color: blue;
- }
-`
+`;
 export const TextBlock = styled.p`
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   color: ${({ theme }) => theme.text.secondary};
   line-height: 150%;
   margin: 1rem auto;
 
-    @media ${props => props.theme.breakpoints.mobile}{
-      font-size: 1rem;
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    font-size: 1rem;
   }
-`
+`;
 export const TextBlockHeading = styled.h3`
-  text-transform: ${props => props.uppercase ? props.uppercase : 'unset'};
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   color: ${({ theme }) => theme.text.main};
-`
+`;
 export const Heading = styled.h1`
   font-weight: normal;
   line-height: 100%;
   color: ${({ theme }) => theme.text.main};
-`
-export const Flex = styled.div`
-  display: flex;
-  justify-content: ${props => props.justifyContent ? props.justifyContent : 'unset'};
-  align-items: ${props => props.alignItems ? props.alignItems : 'unset'};
-  margin: 4rem auto;
+`;
 
-  @media ${props => props.theme.breakpoints.mobile}{
-    flex-direction: column;
-  }
-`
 export const SVG = styled.svg`
   width: 100%;
 
-  .react-icon:hover{
-    fill: #00D1F7;
+  .react-icon:hover {
+    fill: #00d1f7;
   }
-  .firebase-icon:hover{
-    fill: #FFCB2E;
+  .firebase-icon:hover {
+    fill: #ffcb2e;
   }
-  .styled-icon:hover{
-    fill: #D66C8E;
+  .styled-icon:hover {
+    fill: #d66c8e;
   }
-  .tailwindcss-icon:hover{
-    fill: #15B7C4;
+  .tailwindcss-icon:hover {
+    fill: #15b7c4;
   }
-`
+`;

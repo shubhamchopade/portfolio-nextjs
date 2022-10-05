@@ -1,12 +1,16 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import {
+  createGlobalStyle,
+  DefaultTheme,
+  ThemeProvider,
+} from "styled-components";
 import { Nav } from "../components/Nav";
-import theme from "../theme";
+import theme, { StylesTypes } from "../components/theme";
 
 const GlobalStyles = createGlobalStyle`
     body {
-      background-color: ${(props) => props.theme.bg.main}
+      background-color:#282729
     } 
 `;
 

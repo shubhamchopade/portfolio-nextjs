@@ -7,14 +7,7 @@ import Image from 'next/image'
 export const Portfolio = () => {
     return (
         <Parent>
-            <Flex justifyContent='flex-end' alignItems='center'>
-                {/* <Logo src={portfolioImg} /> */}
-                <Image href={portfolioImg} />
-                <div className='project-header'>
-                    <Heading>About Portfolio</Heading>
-                    <TextBlock>Coming soon..</TextBlock>
-                </div>
-            </Flex>
+
         </Parent >
     )
 }

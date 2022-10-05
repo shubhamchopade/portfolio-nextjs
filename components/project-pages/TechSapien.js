@@ -1,18 +1,11 @@
 import React from 'react'
-import { Flex, Heading, Logo, TextBlock} from '../Common'
+import { Heading, Logo, TextBlock } from '../Common'
 import techSapienImg from '../assets/projects/tech-sapien/cover.png'
 import styled from 'styled-components'
 
 export const TechSapien = () => {
     return (
         <Parent>
-            <Flex justifyContent='flex-end' alignItems='center'>
-                <Logo src={techSapienImg} />
-                <div className='project-header'>
-                    <Heading>Tech Sapien</Heading>
-                    <TextBlock>Coming soon..</TextBlock>
-                </div>
-            </Flex>
         </Parent >
     )
 }

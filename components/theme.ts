@@ -32,4 +32,38 @@ const styles = {
   },
 };
 
-export default styles
+export default styles;
+
+export interface StylesTypes {
+  bg: {
+    main: string;
+    secondary: string;
+    neutral: string;
+  };
+  text: {
+    main: string;
+    secondary: string;
+    neutral: string;
+  };
+  breakpoints: {
+    mobile: string;
+    tablet: string;
+  };
+  spacing: {
+    xxSmall: string;
+    xSmall: string;
+    small: string;
+    medium: string;
+    large: string;
+    xLarge: string;
+    xxLarge: string;
+  };
+  animations: {
+    button: string;
+    link: string;
+    theme: string;
+  };
+  shadows: {
+    shadow1: string;
+  };
+}

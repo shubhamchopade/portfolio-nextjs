@@ -1,18 +1,10 @@
 import React from 'react'
-import { Flex, Heading, Logo, TextBlock} from '../Common'
 import tailwindGradientsImg from '../assets/projects/tailwind-gradient/cover.png'
 import styled from 'styled-components'
 
 export const TailwindGradient = () => {
     return (
         <Parent>
-            <Flex justifyContent='flex-end' alignItems='center'>
-                <Logo src={tailwindGradientsImg} />
-                <div className='project-header'>
-                    <Heading>Tailwind Gradient</Heading>
-                    <TextBlock>Coming soon..</TextBlock>
-                </div>
-            </Flex>
         </Parent >
     )
 }
