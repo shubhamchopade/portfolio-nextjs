@@ -83,9 +83,7 @@ export const ScrollText = () => {
           loading="lazy"
           width={200}
           height={300}
-          src={
-            "https://pico.techsapien.dev/!2DqWZSayDM/velWPhVMQeQKcxggNEU8YmIo52R.jpg"
-          }
+          src={"https://pico.techsapien.dev/!sBAqrWoFFv"}
           alt="random"
         />
         <Example />
