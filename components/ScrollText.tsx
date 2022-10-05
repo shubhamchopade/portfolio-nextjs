@@ -33,6 +33,9 @@ export const ScrollText = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           {/* TODO : Insert Lottiefiles */}
+          {/* <Text x="10%" y="50%" text-anchor="middle" str={isScrolled}>
+            GET YOUR WORK DONE
+          </Text> */}
         </SVG>
       </Container>
       <div style={{ height: "30vh" }}>
@@ -46,7 +49,7 @@ const Wrapper = styled.main`
   margin: 3rem 0;
 `;
 const Container = styled.section`
-  height: 200vh;
+  /* height: 200vh; */
 `;
 const SVG = styled.svg`
   position: sticky;
