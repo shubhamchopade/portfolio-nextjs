@@ -6,6 +6,9 @@ import Lottie from "lottie-react";
 import dynamic from "next/dynamic";
 import thankyouAnimation from "./assets/82521-thank-you.json";
 import { useLottie, useLottieInteractivity } from "lottie-react";
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
+import Image from "next/image";
 
 const style = {
   height: 300,
@@ -20,6 +23,7 @@ const options = {
 
 const Example = () => {
   const lottieObj = useLottie(options, style);
+
   const Animation = useLottieInteractivity({
     lottieObj,
     mode: "cursor",
@@ -42,6 +46,7 @@ const Example = () => {
 export const ScrollText = () => {
   const [isScrolled, setIsScrolled] = useState(0);
   const { scrollY } = useScroll();
+  const { width, height } = useWindowSize();
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
@@ -60,6 +65,7 @@ export const ScrollText = () => {
 
   return (
     <Wrapper>
+      {/* <Confetti numberOfPieces={100} width={width} height={height} /> */}
       <Container>
         <SVG
           width="1020"
@@ -73,6 +79,15 @@ export const ScrollText = () => {
             GET YOUR WORK DONE
           </Text> */}
         </SVG>
+        {/* <Image
+          loading="lazy"
+          width={200}
+          height={300}
+          src={
+            "https://pico.techsapien.dev/!2DqWZSayDM/velWPhVMQeQKcxggNEU8YmIo52R.jpg"
+          }
+          alt="random"
+        /> */}
         <Example />
       </Container>
       <div style={{ height: "30vh" }}>
