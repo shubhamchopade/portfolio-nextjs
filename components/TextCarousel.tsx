@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import shubham from "./assets/shubham.png";
-import thugLife from "./assets/thugLife.png";
-import xmas from "./assets/xmasCap.png";
+import shubham from "components/assets/shubham.webp";
+import thugLife from "./assets/thugLife.webp";
+import xmas from "./assets/xmasCap.webp";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 

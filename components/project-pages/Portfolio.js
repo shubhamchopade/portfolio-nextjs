@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Heading, Logo, TextBlock } from '../Common'
-import portfolioImg from '../assets/projects/portfolio/cover.png'
+import portfolioImg from '../assets/projects/portfolio/cover.webp'
 import styled from 'styled-components'
 import Image from 'next/image'
 

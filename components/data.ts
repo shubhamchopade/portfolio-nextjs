@@ -1,7 +1,7 @@
-import bookPunditsImg from "../components/assets/projects/the-book-pundits/cover.png";
-import techSapienImg from "././assets/projects/tech-sapien/cover.png";
-import tailwindGradientsImg from "././assets/projects/tailwind-gradient/cover.png";
-import portfolioImg from "././assets/projects/portfolio/cover.png";
+import bookPunditsImg from "../components/assets/projects/the-book-pundits/cover.webp";
+import techSapienImg from "././assets/projects/tech-sapien/cover.webp";
+import tailwindGradientsImg from "././assets/projects/tailwind-gradient/cover.webp";
+import portfolioImg from "././assets/projects/portfolio/cover.webp";
 
 const projectData = [
   {
@@ -42,4 +42,4 @@ const projectData = [
   },
 ];
 
-export default projectData
+export default projectData;
