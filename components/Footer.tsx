@@ -75,6 +75,10 @@ const Container = styled.footer`
     width: 10rem;
     margin-bottom: 2rem;
 
+    a {
+      margin: 0 0.5rem;
+    }
+
     img {
       width: 25px;
       cursor: pointer;

@@ -14,6 +14,7 @@ export const Nav = () => {
       </Link>
       <Links>
         <StyledLink
+          href="ShubhamChopade_Resume.pdf"
           onClick={() => {
             ReactGA.send({ hitType: "downloadResume", page: "/nav" });
           }}
