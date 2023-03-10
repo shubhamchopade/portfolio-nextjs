@@ -49,23 +49,26 @@ export const ScrollText = () => {
   const { width, height } = useWindowSize();
 
   useEffect(() => {
-    window.addEventListener("scroll", (e) => {
-      let winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
+    const scrollEvent = () =>
+      window.addEventListener("scroll", (e) => {
+        let winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
 
-      let height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
+        let height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
 
-      let scrolled = (winScroll / height) * 100;
+        let scrolled = (winScroll / height) * 100;
 
-      setIsScrolled(scrolled);
-    });
+        setIsScrolled(scrolled);
+      });
+
+    () => window.removeEventListener("scroll", scrollEvent);
   }, [scrollY]);
 
   return (
     <Wrapper>
-      {/* <Confetti numberOfPieces={100} width={width} height={height} /> */}
+      <Confetti numberOfPieces={100} width={width} height={height} />
       <Container>
         <SVG
           width="1020"
@@ -74,19 +77,10 @@ export const ScrollText = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* TODO : Insert Lottiefiles */}
-          {/* <Text x="10%" y="50%" text-anchor="middle" str={isScrolled}>
+          <Text x="10%" y="50%" text-anchor="middle">
             GET YOUR WORK DONE
-          </Text> */}
+          </Text>
         </SVG>
-        <Image
-          loading="lazy"
-          width={200}
-          height={300}
-          src={"https://pico.techsapien.dev/!sBAqrWoFFv"}
-          alt="random"
-        />
-        <Example />
       </Container>
       <div style={{ height: "30vh" }}>
         <Button translateX={isScrolled} />
@@ -99,7 +93,7 @@ const Wrapper = styled.main`
   margin: 3rem 0;
 `;
 const Container = styled.section`
-  /* height: 200vh; */
+  height: 100vh;
 `;
 const SVG = styled.svg`
   position: sticky;
