@@ -14,10 +14,11 @@ export const Nav = () => {
       </Link>
       <Links>
         <StyledLink
-          href="ShubhamChopade_Resume.pdf"
+          href="./ShubhamChopade_resume.pdf"
           onClick={() => {
             ReactGA.send({ hitType: "downloadResume", page: "/nav" });
           }}
+          download="ShubhamChopade_resume.pdf"
           target="_blank"
         >
           <span>Resume</span>{" "}
