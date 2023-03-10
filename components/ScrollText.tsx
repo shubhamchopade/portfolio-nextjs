@@ -32,7 +32,12 @@ export const ScrollText = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <Text x="10%" y="50%" text-anchor="middle" isScrolled={isScrolled}>
+          <Text
+            x="10%"
+            y="50%"
+            text-anchor="middle"
+            fillOpacity={isScrolled > 90 ? "100%" : "0%"}
+          >
             GET YOUR WORK DONE
           </Text>
         </SVG>
@@ -66,9 +71,7 @@ interface TextProps {
   isScrolled: number;
 }
 
-const Text = styled.text.attrs((props: TextProps) => ({
-  fillOpacity: props.isScrolled > 90 ? "100%" : "0%",
-}))`
+const Text = styled.text.attrs((props: TextProps) => ({}))`
   font-size: 4rem;
   font-weight: bold;
   stroke: ${(props) => props.theme.text.main};
